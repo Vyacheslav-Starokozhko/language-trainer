@@ -1,17 +1,14 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
-import {cardsReducer} from "@/store/slices/cardsSlice";
+import {entitiesReducer} from "@/store/slices/entitiesSlice";
 import {globalReducer} from "@/store/slices/globalSlice";
 
 const rootReducer = combineReducers({
-    cardsReducer,
+    entitiesReducer,
     globalReducer
 })
 
 
 //@ts-ignore
-
-
-
 export const store = configureStore({
     devTools: true,
     reducer: rootReducer,
@@ -22,10 +19,6 @@ export const store = configureStore({
 
         ]),
 });
-
-
-
-
 
 export type AppStore = ReturnType<typeof store>
 export type RootState = ReturnType<AppStore['getState']>

@@ -1,6 +1,8 @@
 import { Poppins } from 'next/font/google';
 import "./globals.scss";
 import StoreProvider from "@/app/StoreProvider";
+import AddItem from "@/Components/AddItem/AddItem";
+import React from "react";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,6 +26,7 @@ export default function RootLayout({
         <StoreProvider>
           <body>
           {children}
+          <AddItem/>
           </body>
         </StoreProvider>
       </html>
