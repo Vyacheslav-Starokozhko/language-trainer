@@ -23,7 +23,7 @@ const Board: React.FC<BoardProps> = ({type}) => {
                     {
                         entities.map((item: any, idx: number) => {
                             return (
-                                <Card/>
+                                <Card number={++idx} item={item}/>
                             )
                         })
                     }

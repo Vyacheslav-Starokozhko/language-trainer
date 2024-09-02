@@ -1,6 +1,63 @@
-.cardsItem{
-  height: 200px;
-  flex-basis: calc(10% - 18px);
-  background-color: #0D0D0D;
+.cardItem{
+  height: 350px;
+  flex-basis: calc(20% - 16px);
+  //background-color: #0D0D0D;
   border-radius: 20px;
+}
+
+.cardNumber{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.Card {
+  position: relative;
+  height: 100%;
+  //padding: 20px;
+  box-shadow: 4px 8px 16px rgba(66, 66, 66,0.5);
+  border-radius: 8px;
+  background: white;
+}
+
+.front,
+.back {
+  width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  position: absolute;
+  word-break: break-word;
+  height: 100%;
+}
+.front{
+  justify-content: center;
+}
+
+.frontContent,
+.backContent{
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+}
+
+
+.frontContent{
+}
+.backContent{
+
+}
+.flipIcon{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
 }

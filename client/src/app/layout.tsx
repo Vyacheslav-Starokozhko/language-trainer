@@ -3,6 +3,7 @@ import "./globals.scss";
 import StoreProvider from "@/app/StoreProvider";
 import AddItem from "@/Components/AddItem/AddItem";
 import React from "react";
+import Save from "@/Components/Save/Save";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <StoreProvider>
           <body>
           {children}
+          <Save/>
           <AddItem/>
           </body>
         </StoreProvider>
